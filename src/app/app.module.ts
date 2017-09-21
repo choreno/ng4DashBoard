@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 import {AppRoutingModule} from './app-routing.module';
+
 import {LoginModule} from './login/login.module';
 import {SignupModule} from './signup/signup.module';
 import {DashboardModule} from './dashboard/dashboard.module';
@@ -20,7 +21,8 @@ import {DashboardModule} from './dashboard/dashboard.module';
     AppRoutingModule,
     LoginModule,
     SignupModule,
-    DashboardModule
+    DashboardModule,
+
     
   ],
   providers: [],

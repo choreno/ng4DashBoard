@@ -10,6 +10,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   declarations: [
     TopnavComponent, 
     SidebarComponent
-  ]
+  ],
+  exports: [TopnavComponent,SidebarComponent]
 })
 export class SharedModule { }
