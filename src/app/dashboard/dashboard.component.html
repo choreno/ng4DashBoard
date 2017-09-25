@@ -1,4 +1,5 @@
-<div id="wrapper" [ngClass]="{'toggled': hasSidebar}">
+
+ <div id="wrapper" [ngClass]="{'toggled': hasSidebar}">
 
 
     <div id="sidebar-wrapper">
@@ -10,7 +11,7 @@
                 <a href="#">Dashboard</a>
             </li>
             <li class="dropdown">
-                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown-menu" data-parent="sidebar-nav">Shortcuts <span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown-menu" data-parent="sidebar-nav">Shortcuts <span class="caret"></span></a>
                 <ul class="dropdown-menu" role="menu">
                     <li class="dropdown-header">Dropdown heading</li>
                     <li><a href="#">Action</a></li>
@@ -23,6 +24,27 @@
             <li>
                 <a href="#">Overview</a>
             </li>
+
+            <div class="nested-menu">
+                <a class="list-group-item" (click)="addExpandClass('pages')">
+                    <span><i class="fa fa-plus"></i>Menu</span>
+                </a>
+                <li class="nested" [class.expand]="showMenu === 'pages'">
+                    <ul class="submenu">
+                        <li>
+                            <a href="javascript:void(0)"><span>1</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><span>2</span></a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)"><span>3</span></a>
+                        </li>
+                    </ul>
+                </li>
+            </div>
+
+
             <li>
                 <a href="#">Events</a>
             </li>
