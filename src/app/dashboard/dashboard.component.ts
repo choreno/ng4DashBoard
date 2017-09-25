@@ -8,21 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
 
-  hasSidebar: boolean = true;
-
-  public isCollapsed = false;
-
-  model = {
-    left: true,
-    middle: false,
-    right: false
-  };
+  hasSidebar: boolean = false;
+  menuHidden = true;
+ 
   
   constructor() { }
 
   ngOnInit() {
   }
 
+  //topbar
+
+  toggleMenu() {
+    this.menuHidden = !this.menuHidden;
+  }
+
+
+
+//   sidebar
 
   isActive = false;
   showMenu = '';

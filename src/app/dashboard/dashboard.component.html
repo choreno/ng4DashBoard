@@ -1,97 +1,97 @@
-
- <div id="wrapper" [ngClass]="{'toggled': hasSidebar}">
-
-
-    <div id="sidebar-wrapper">
-        <ul class="sidebar-nav">
-            <li class="sidebar-brand">
-                <a href="#">Start Bootstrap</a>
-            </li>
-            <li>
-                <a href="#">Dashboard</a>
-            </li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown-menu" data-parent="sidebar-nav">Shortcuts <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li class="dropdown-header">Dropdown heading</li>
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li><a href="#">Separated link</a></li>
-                    <li><a href="#">One more separated link</a></li>
-                </ul>
-            </li>
-            <li>
-                <a href="#">Overview</a>
-            </li>
-
-            <div class="nested-menu">
-                <a class="list-group-item" (click)="addExpandClass('pages')">
-                    <span><i class="fa fa-plus"></i>Menu</span>
-                </a>
-                <li class="nested" [class.expand]="showMenu === 'pages'">
-                    <ul class="submenu">
-                        <li>
-                            <a href="javascript:void(0)"><span>1</span></a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)"><span>2</span></a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0)"><span>3</span></a>
-                        </li>
-                    </ul>
-                </li>
-            </div>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Bootstrap Sidebar</a>
+    <button class="navbar-toggler" type="button" aria-controls="navbar-menu" aria-label="Toggle navigation" (click)="toggleMenu()"
+      [attr.aria-expanded]="!menuHidden">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="navbar-menu" class="collapse navbar-collapse float-xs-none" [ngbCollapse]="menuHidden">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link text-uppercase" routerLink="/home" routerLinkActive="active">
+    <i class="fa fa-home"></i><span >Home</span>
+    </a>
+        <a class="nav-item nav-link text-uppercase" routerLink="/about" routerLinkActive="active">
+    <i class="fa fa-question-circle"></i> <span >About</span>
+    </a>
+      </div>
+      <div class="navbar-nav ml-auto">
+        <!-- <div class="nav-item" ngbDropdown placement="bottom-right">
+    <a id="language-dropdown" class="nav-link" ngbDropdownToggle>{{currentLanguage}}</a>
+    <div ngbDropdownMenu aria-labelledby="language-dropdown">
+    <button class="dropdown-item" *ngFor="let language of languages" (click)="setLanguage(language)">
+    {{language}}
+    </button>
+    </div>
+    </div> -->
+        <div class="nav-item" ngbDropdown placement="bottom-right">
+          <a id="user-dropdown" class="nav-link" ngbDropdownToggle>
+    <i class="fa fa-user-circle"></i>
+    </a>
+          <div ngbDropdownMenu aria-labelledby="user-dropdown">
+            <h6 class="dropdown-header">
+              <span>Logged in as</span> <b>THBar</b></h6>
+            <div class="dropdown-divider"></div>
+            <button class="dropdown-item" (click)="logout()">Logout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
 
 
-            <li>
-                <a href="#">Events</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Services</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
+
+
+
+<button class="btn btn-default" id="toggle-sidebar" type="button" (click)="eventCalled()">
+    &#9776; 
+    </button>
+<nav class="sidebar navbar-dark bg-dark " [ngClass]="{sidebarPushRight: isActive}">
+  <ul class="list-group">
+    <a routerLink="/dashboard/home" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <i class="fa fa-fw fa-dashboard"></i> Dashboard
+    </a>
+    <a [routerLink]="['chart']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <i class="fa fa-fw fa-bar-chart-o"></i> Charts
+    </a>
+    <a [routerLink]="['tables']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <i class="fa fa-fw fa-table"></i> Tables
+    </a>
+    <a [routerLink]="['forms']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <i class="fa fa-fw fa-edit"></i> Forms
+    </a>
+    <a [routerLink]="['element']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <i class="fa fa-fw fa-desktop"></i> Bootstrap Elements
+    </a>
+    <a [routerLink]="['grid']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <i class="fa fa-fw fa-wrench"></i> Bootstrap Grid
+    </a>
+    <a [routerLink]="['components']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <i class="fa fa-th-list"></i> &nbsp;Component
+    </a>
+    <div class="nested-menu">
+        <a class="list-group-item" (click)="addExpandClass('pages')">
+            <span><i class="fa fa-plus"></i> &nbsp; Menu 
+            <span *ngIf="showMenu !=='pages';else rightArrow "><i class="fa fa-angle-down pull-right"></i></span>
+            </span>
+        </a>
+      <ng-template #rightArrow> <i class="fa fa-angle-right pull-right"></i></ng-template>
+      <li class="nested" [ngClass]="{'expand' : showMenu === 'pages' }">
+        <ul class="submenu">
+          <li>
+            <a href><span>Submenu</span></a>
+          </li>
+          <li>
+            <a href><span>Submenu</span></a>
+          </li>
         </ul>
+      </li>
     </div>
-
-
-
-
-    <div id="page-content-wrapper">
-
-        <i class="fa fa-bars fa-lg" aria-hidden="true" (click)='hasSidebar = !hasSidebar'></i>
-
-        <p>
-            dashboard works!
-        </p>
-
-        <router-outlet></router-outlet>
-
-    </div>
-
-
-
-</div>
-
-
-
-
-
-
-<!-- <div class="wrapper">
-
-  <app-topnav></app-topnav>  
-  <app-sidebar></app-sidebar> 
-  
-  
-  <div class="btn btn-primary">well</div>
-  <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
-
-  
-</div> -->
+    <a [routerLink]="['blankpage']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+    <i class="fa fa-file-o"></i> &nbsp;BlankPage
+    </a>
+    <a class="list-group-item more-themes" href="http://www.strapui.com/">
+    More Themes
+    </a>
+  </ul>
+</nav>
