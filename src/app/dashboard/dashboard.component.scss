@@ -1,9 +1,11 @@
+
+
 $topnav-background-color:#343a40;
+
 //topbar
 .navbar {
   background-color: $topnav-background-color;
 }
-
 .nav-link.dropdown-toggle {
   cursor: pointer;
 }
@@ -101,15 +103,19 @@ $topnav-background-color:#343a40;
 }
 
 .nested-menu {
+
   .list-group-item {
     cursor: pointer;
   }
+
   .nested {
     list-style-type: none;
   }
+
   ul.submenu {
     height: 0;
   }
+
   & .expand {
     ul.submenu {
       list-style-type: none;
@@ -163,26 +169,26 @@ $topnav-background-color:#343a40;
   }
 }
 
-.carousel {
-  .carousel-control {
-    cursor: pointer;
-  }
-  .carousel-inner {
-    .carousel-item {
-      img {
-        width: 100%;
-        max-height: 373px;
-      }
-    }
-    .fa-chevron-left:before {
-      position: absolute;
-      top: 46%;
-      left: 50px;
-    }
-    .fa-chevron-right:before {
-      position: absolute;
-      top: 46%;
-      right: 50px;
-    }
-  }
-}
+// .carousel {
+//   .carousel-control {
+//     cursor: pointer;
+//   }
+//   .carousel-inner {
+//     .carousel-item {
+//       img {
+//         width: 100%;
+//         max-height: 373px;
+//       }
+//     }
+//     .fa-chevron-left:before {
+//       position: absolute;
+//       top: 46%;
+//       left: 50px;
+//     }
+//     .fa-chevron-right:before {
+//       position: absolute;
+//       top: 46%;
+//       right: 50px;
+//     }
+//   }
+// }
