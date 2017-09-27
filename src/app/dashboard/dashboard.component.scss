@@ -11,7 +11,7 @@
 .header {
   position: absolute;
   width: 100%;
-  z-index: 3;
+  z-index: 1000;
   height: 44px;
   background-color: #35475e;
   border-bottom: 3px solid #2d3d51;
@@ -26,7 +26,7 @@
 //nav-trigger 
 
 .nav-trigger {
-  
+
   color: white; 
   position: relative;
   float: right;
@@ -111,18 +111,18 @@
 @media screen and (min-width: 600px) {
   .header {
     background-color: #35475e;
-    z-index: 1;
-    .logo {
-      display: none;
-    }
+    z-index: 1000;
+    // .logo {
+    //   display: none;
+    // }
     .nav-trigger {
       display: none;
     }
-    .nav-trigger span,
-    .nav-trigger span:before,
-    span:after {
-      background-color: #fff;
-    }
+    // .nav-trigger span,
+    // .nav-trigger span:before,
+    // span:after {
+    //   background-color: #fff;
+    // }
   }
   .side-nav {
     display: block;
