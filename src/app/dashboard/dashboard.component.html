@@ -1,71 +1,77 @@
+<app-topnav (sidebarStatus)='showSidebar($event)'></app-topnav>
+<app-sidebar [isSidebar]='isSidebar'></app-sidebar>>
+
+
+<div class="main-content" [ngClass]="{visible: isSidebar}">
+    <div class="title">
+        Analytics
+        <br>
+        Responsive dashboard and admin side menu layout
+		</div>
+  
+</div>
+
+
+<!-- 
 <div class="header">
-  <div class="logo">
-    <!-- <i class="fa fa-tachometer"></i>Brand -->
-    ngZonMony
+    <div class="logo">
+      ngZonMony
+    </div>
+    
+    <a href="javascript:void(0);" class="nav-trigger"> 
+      <i class="fa fa-bars" (click)="toggleSidebar()"></i>  
+    </a>
+  
   </div>
   
-  <!-- <a href="javascript:void(0);" class="nav-trigger"><span></span></a> -->
-  <a href="javascript:void(0);" class="nav-trigger"> <i class="fa fa-bars "></i>  </a>
-
-</div>
-
-
-<div class="side-nav">
-  <!-- <div class="logo">
-      <i class="fa fa-tachometer"></i>
-      <span>Brand</span>
-  </div> -->
-  <nav>
-      <ul>
-          <li>
-              <a href="#">
-                  <span><i class="fa fa-user"></i></span>
-                  <span>Users</span>
-              </a>
-          </li>
-          <li>
-              <a href="#">
-                  <span><i class="fa fa-envelope"></i></span>
-                  <span>Messages</span>
-              </a>
-          </li>
-          <li class="active">
-              <a href="#">
-                  <span><i class="fa fa-bar-chart"></i></span>
-                  <span>Analytics</span>
-              </a>
-          </li>
-          <li>
-              <a href="#">
-                  <span><i class="fa fa-credit-card-alt"></i></span>
-                  <span>Payments</span>
-              </a>
-          </li>
-      </ul>
-  </nav>
-</div>
-<div class="main-content">
-  Responsive dashboard and admin side menu layout
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="side-nav" [ngClass]="{visible: isSidebar}">
+    <nav>
+        <ul>
+            <li>
+                <a href="#">
+                    <span><i class="fa fa-tachometer"></i></span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+  
+            <li>
+                <a href="#">
+                    <span><i class="fa fa-bar-chart-o"></i></span>
+                    <span>Analytics</span>
+                </a>
+            </li>
+  
+            <li>
+                <a href="#">
+                    <span><i class="fa fa-plus"></i></span>
+                    <span>Menu</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span><i class="fa fa-credit-card-alt"></i></span>
+                    <span>Payments</span>
+                </a>
+            </li> 
+            <li>
+                <a href="#">
+                    <span><i class="fa fa-user"></i></span>
+                    <span>Users</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+  </div>
+  
+  <div class="main-content" [ngClass]="{visible: isSidebar}">
+      <div class="title">
+          Analytics
+          <br>
+          Responsive dashboard and admin side menu layout
+      </div>
+    
+  </div>
+ -->
 
 <!-- <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">

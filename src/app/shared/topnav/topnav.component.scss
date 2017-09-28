@@ -1,1 +1,43 @@
+@import  'src/styles' ;
 
+
+.logo {
+  color: white;
+  float: left;
+  z-index: 10;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  height: $header-height;
+  background-color: $theme-color;
+  border-bottom: 3px solid grey;
+}
+
+.nav-trigger {
+  color: white;
+  position: relative;
+  float: right;
+  padding: 10px;
+
+  i {
+    padding-top: 0.2rem;
+    font-size: 1.5rem;
+  }
+}
+
+
+@media screen and (min-width: $tablet-size) {
+  .header {
+    background-color: $theme-color;
+    z-index: 1000;
+    .nav-trigger {
+      display: none;
+    }
+  }
+}

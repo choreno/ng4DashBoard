@@ -1,3 +1,38 @@
-<p>
-  sidebar works!
-</p>
+<div class="side-nav" [ngClass]="{visible: isSidebar}">
+  <nav>
+    <ul>
+      <li>
+        <a href="#">
+            <span><i class="fa fa-tachometer"></i></span>
+            <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+            <span><i class="fa fa-bar-chart-o"></i></span>
+            <span>Analytics</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+            <span><i class="fa fa-plus"></i></span>
+            <span>Menu</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+            <span><i class="fa fa-credit-card-alt"></i></span>
+            <span>Payments</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+            <span><i class="fa fa-user"></i></span>
+            <span>Users</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

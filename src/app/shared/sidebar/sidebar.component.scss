@@ -1,0 +1,122 @@
+@import  'src/styles' ;
+
+
+.side-nav {
+  padding-top: $header-height;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-color: $theme-color;
+  z-index: 1;
+  display: none;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    
+    li {
+      padding: 1rem ;
+    
+      a {
+        color: white;
+        display: block;
+        text-decoration: none;
+        
+        i {
+          color:white;
+          min-width: 2rem;
+          text-align: center;
+        }
+
+      }
+
+      &:hover {
+        background: lighten($theme-color, 25%);
+        color: #fff;
+      }
+
+      span:nth-child(2) {
+        margin-left: 1rem;
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+    }
+  }
+
+
+}
+
+.side-nav.visible{
+  display: block; 
+  height: 50vh; 
+  
+}
+
+
+//Tablet 
+@media screen and (min-width: $tablet-size) {
+
+  .side-nav {
+
+    display: block;
+    width: $side-menu-width-tablet;
+
+    ul {
+    
+      li {
+        text-align: center;
+        span:nth-child(2) {
+          display: none;
+        }
+        i {
+          font-size: 1.5rem;
+        } 
+
+      }
+    }
+  }
+
+  .side-nav.side-nav.visible{
+    height: 100vh;
+
+  }
+
+}
+
+
+//desktop
+@media screen and (min-width: $desktop-size) {
+  
+  .side-nav {
+    width: $side-menu-width-desktop;
+  
+    ul {
+
+      li {
+        text-align: left;
+        span:nth-child(2) {
+          display: inline-block;
+        }
+
+        i {
+          font-size: 1rem;
+        }
+
+      }
+    }
+  
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
