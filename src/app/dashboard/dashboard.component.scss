@@ -5,12 +5,12 @@
 .main-content {
   padding: $header-height ;
   height: 100%; 
-  overflow: scroll;
+  overflow: scroll; 
   
 }
 
 .main-content.visible {
-  padding-top: 50vh ;
+  padding-top: $side-menu-height-mobile ;
 }
 
 

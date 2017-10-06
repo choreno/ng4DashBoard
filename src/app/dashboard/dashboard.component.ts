@@ -8,13 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DashboardComponent implements OnInit {
 
 
-
+  //get the click event of menu icon from topnav component and transfer it to sidebar component
   isSidebar = false;
 
   showSidebar() {
     this.isSidebar = !this.isSidebar;
   }
-
 
 
   constructor() { }
