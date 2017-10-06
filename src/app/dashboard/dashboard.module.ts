@@ -6,8 +6,8 @@ import {DashboardComponent} from './dashboard.component';
 
 import {SharedModule} from '../shared/shared.module';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {LoginModule} from '../login/login.module';
-import {SignupModule} from '../signup/signup.module';
+// import {LoginModule} from '../login/login.module';
+// import {SignupModule} from '../signup/signup.module';
 
 
 
@@ -17,8 +17,8 @@ import {SignupModule} from '../signup/signup.module';
     DashboardRoutingModule,
     SharedModule,
     // NgbModule
-    LoginModule,
-    SignupModule,
+    // LoginModule,
+    // SignupModule,
    
   ],
   declarations: [
