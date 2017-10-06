@@ -9,7 +9,6 @@ import { LoginModule } from './login/login.module';
 import { SignupModule } from './signup/signup.module';
 import { DashboardModule } from './dashboard/dashboard.module';
 
-// import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
     AppRoutingModule,
     LoginModule,
     SignupModule,
-    DashboardModule,
-    // NgbModule.forRoot()
+    DashboardModule
 
   ],
   providers: [],

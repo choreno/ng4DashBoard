@@ -15,8 +15,15 @@
     padding: 0;
     list-style: none;
     
+    li.active{
+      background: lighten($theme-color, 25%);
+    }
+
+
     li {
       padding: 1rem ;
+
+     
     
       a {
         color: white;
@@ -42,7 +49,12 @@
         font-weight: 600;
       }
 
+    
     }
+   
+
+      
+
   }
 
 
@@ -111,8 +123,6 @@
 
 
 }
-
-
 
 
 

@@ -1,22 +1,22 @@
 <div class="side-nav" [ngClass]="{visible: isSidebar}">
   <nav>
     <ul>
-      <li>
-        <a href="#">
+      <li  routerLinkActive="active">
+        <a [routerLink]="['/dashboard/main']">
             <span><i class="fa fa-tachometer"></i></span>
             <span>Dashboard</span>
         </a>
       </li>
 
-      <li>
-        <a href="#">
+      <li routerLinkActive="active">
+        <a [routerLink]="['/dashboard/charts']" >
             <span><i class="fa fa-bar-chart-o"></i></span>
             <span>Charts</span>
         </a>
       </li>
 
-      <li>
-        <a href="#">
+      <li routerLinkActive="active">
+        <a [routerLink]="['/signup']" >
             <span><i class="fa fa-plus"></i></span>
             <span>Menu</span>
         </a>
@@ -27,10 +27,10 @@
             <span>Payments</span>
         </a>
       </li>-->
-      <li> 
-        <a href="#">
+      <li routerLinkActive="active"> 
+        <a [routerLink]="['/dashboard/users']" >
             <span><i class="fa fa-user"></i></span>
-            <span>Users --- testing</span>
+            <span>Users</span>
         </a>
       </li>
     </ul>

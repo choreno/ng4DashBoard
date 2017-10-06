@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { DashboardRoutingModule } from './dashboard-routing.module';
-import {DashboardComponent} from './dashboard.component';
+import { DashboardComponent } from './dashboard.component';
 
-import {SharedModule} from '../shared/shared.module';
+import { SharedModule } from '../shared/shared.module';
 import { ChartsComponent } from './charts/charts.component';
+import { MainComponent } from './main/main.component';
 
 
 
@@ -18,7 +19,8 @@ import { ChartsComponent } from './charts/charts.component';
   ],
   declarations: [
     DashboardComponent,
-    ChartsComponent, 
+    ChartsComponent,
+    MainComponent,
 
   ]
 })

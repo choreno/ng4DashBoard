@@ -5,24 +5,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+//import { DashboardComponent } from './dashboard/dashboard.component';
+//import { ChartsComponent } from "./dashboard/charts/charts.component";
 
-const ROUTES: Routes = [
+const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  // { path: '', redirectTo: 'login', pathMatch: 'full' },
-  // { path: '**', redirectTo: 'login', pathMatch: 'full' }
 
-  { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
-  { path: '**', redirectTo: 'dashboard', pathMatch: 'full' }
+  // //intial route
+  // { path: '', redirectTo: 'login', pathMatch: 'full' },
 
 ]
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(ROUTES)
+    RouterModule.forRoot(appRoutes)
   ],
   declarations: [],
   exports: [RouterModule]
