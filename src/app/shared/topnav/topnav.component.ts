@@ -16,7 +16,7 @@ export class TopnavComponent implements OnInit {
 
   @Output() sidebarStatus : EventEmitter<boolean> = new EventEmitter<boolean>();
   
-  brand: string = 'ngZonMony'
+  brand: string = 'RL Carriers'
   isSidebar: boolean = false; 
 
   toggleSidebar()
