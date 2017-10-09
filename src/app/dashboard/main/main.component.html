@@ -14,7 +14,7 @@
             <div class="d-flex flex-column justify-content-center">
               <div class="main-today">Fri.</div>
               <div class="main-time">{{now| date:"H:mm:ss"}}</div>
-              <div class="main-date">10/10/2017</div>
+              <div class="main-date">{{now|date}}</div>
             </div>
           </div>
         </div>
@@ -59,9 +59,9 @@
               <div class="mr-1"  >
                 <div class="d-flex flex-column align-items-end">
                   <div>&nbsp;</div>
-                  <div class="main-last-payment">$5,000.88</div>
+                  <div class="main-last-payment">{{5000.88 | currency:'USD': true: '1.2-2'}}</div>
                   <div>&nbsp;</div>
-                  <div class="main-current-payment">$8,888.88</div>
+                  <div class="main-current-payment">{{8888.88 | currency:'USD': true: '1.2-2'}}</div>
                 </div>
               </div>
             </div>
@@ -71,12 +71,12 @@
 
   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3">
       <div class="card mb-3 border border-warning" >
-        <div class="card-header main-header" >Grand Total <span class="main-since">since 2009</span>
+        <div class="card-header main-header" >$$ Grand Total <span class="main-since">since 2009</span>
         </div>
         <div class="card-body" >
             <div class="d-flex justify-content-center align-items-center main-card-body" >
                 <div class="mr-1" >
-                  <div class="main-grand-total">$555,333,99</div>
+                  <div class="main-grand-total">{{555333.99 | currency:'USD': true: '1.2-2'}}</div>
                 </div>
               </div>
         </div>
@@ -84,5 +84,55 @@
     </div>
 
     
+
+</div>
+
+<!-- Charts -->
+
+<div class="row mt-2">
+
+
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+        <div class="card mb-3 border border-warning" >
+          <div class="card-header main-header">
+            Analysis By Year
+          </div>
+          <div class="card-body">
+
+              <div style="display: block ">
+                  <canvas style="height:300px !important" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+                    [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                  </canvas>
+        
+                </div>
+
+
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-5">
+        <div class="card mb-3 border border-warning" >
+          <div class="card-header main-header">
+            Anaylysis By Folder
+          </div>
+          <div class="card-body">
+            
+            <div class="d-flex justify-content-between align-items-center main-card-body">
+              <div class="ml-1" >
+                <i class="fa fa-folder-open-o fa-5x"></i>
+              </div>
+              <div class="mr-1" >
+                <div class="main-unpaid">13/25</div> 
+              </div>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+
+      
+
+
 
 </div>
