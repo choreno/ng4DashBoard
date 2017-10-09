@@ -1,0 +1,81 @@
+@import  'src/styles' ;
+
+.main-header {
+    font-size: 1.5rem; 
+    font-weight: bold; 
+}
+
+.main-card-body {
+    height: 12vh; 
+}
+
+.main-icon {
+    position:relative;
+    top:50%;
+    left:50%; 
+    transform:translate(-50%,-50%) ;
+}
+
+.main-today {
+    font-size:2rem;
+    text-align:center;
+}
+
+.main-time {
+
+    font-size:1.5rem;
+    text-align:center;
+}
+
+.main-date {
+    font-size:1.5rem;
+    text-align: center; 
+}
+
+.main-unpaid {
+    font-size: 2.5rem ;
+
+}
+
+.main-last-payment {
+    font-size: 1.3rem;
+}
+
+.main-current-payment
+{
+    font-size: 1.8rem;
+    color: red; 
+}
+
+.main-since{
+    font-size:1rem;
+    font-weight: normal;
+}
+
+.main-grand-total
+{
+    font-size: 3rem;
+    color:green;
+    
+}
+
+//Tablet
+@media screen and (min-width: $tablet-size)
+{
+    .main-current-payment
+    {
+        font-size: 1.5rem;
+    }
+
+    .main-grand-total
+    {
+        font-size: 2.5rem;
+    }
+
+
+}
+
+//desktop
+@media screen and (min-width: $desktop-size) {
+
+}
