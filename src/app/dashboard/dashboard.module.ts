@@ -12,7 +12,7 @@ import { ChartsModule } from 'ng2-charts';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ExpenseDb } from '../data-access/expense.db';
 import { ExpenseService } from '../service/expense.service';
-
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   imports: [
@@ -21,6 +21,7 @@ import { ExpenseService } from '../service/expense.service';
     SharedModule,
     ChartsModule,
     InMemoryWebApiModule.forRoot(ExpenseDb),
+    HttpModule
   ],
   declarations: [
     DashboardComponent,

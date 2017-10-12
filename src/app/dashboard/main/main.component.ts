@@ -40,6 +40,7 @@ export class MainComponent implements OnInit {
 
   }
 
+
   //Charts
 
   
