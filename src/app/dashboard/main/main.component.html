@@ -126,3 +126,43 @@
     </div>
   
   </div>
+
+  <!-- Charts2 -->
+
+<div class="row mt-3">
+  
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+  
+      <div class="card mb-3 border border-warning" style="Width: 100%">
+        <div class="card-header" style="font-size:20px">Analysis By Year
+        </div>
+        <div class="card-body">
+  
+          <div style="display: block ">
+            <canvas style="height:300px !important" baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions"
+              [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+            </canvas>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+      <div class="card mb-3 border border-warning" style="Width: 100%">
+        <div class="card-header" style="font-size:20px">Analysis By Folder
+        </div>
+        <div class="card-body">
+  
+          <div style="display: block  ">
+            <canvas style="height:300px !important"  baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [options]="radarChartOptions" [legend]="radarChartLegend"
+              [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+            </canvas>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+  
+  </div>
