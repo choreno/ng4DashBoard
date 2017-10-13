@@ -13,6 +13,7 @@ import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ExpenseDb } from '../data-access/expense.db';
 import { ExpenseService } from '../service/expense.service';
 import { HttpModule } from '@angular/http';
+import { BillComponent } from './bill/bill.component';
 
 @NgModule({
   imports: [
@@ -27,6 +28,7 @@ import { HttpModule } from '@angular/http';
     DashboardComponent,
     ChartsComponent,
     MainComponent,
+    BillComponent,
 
   ],
   providers: [ExpenseService]

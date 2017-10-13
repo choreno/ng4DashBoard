@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
 import { MainComponent } from './main/main.component';
 import { ChartsComponent } from './charts/charts.component';
+import { BillComponent } from './bill/bill.component';
 
 const dashboardRoutes: Routes = [
 
@@ -11,6 +12,7 @@ const dashboardRoutes: Routes = [
     path: 'dashboard', component: DashboardComponent,
     children: [
       { path: 'main', component: MainComponent },
+      { path: 'bill', component: BillComponent },
       { path: 'charts', component: ChartsComponent },
     ]
   },
